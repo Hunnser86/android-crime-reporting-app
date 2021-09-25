@@ -1,3 +1,4 @@
+/*Main Styles*/
 body {
     background-color: black;
     font-family: 'Space Mono', monospace;
@@ -29,7 +30,56 @@ nav ul{
     color: black;
 }
 
+.mobile-li{
+    color: black;
+}
+
 .flashes h4{
     line-height: 2;
 }
+
+
+/*Registration page*/
+
+.welcome-div{
+    margin-top: 60px;
+    border: dotted 2px green;
+}
+
+h3{
+    color: green;
+}
+
+h4{
+    color: green;
+}
+
+.form-div{
+    margin-top: 60px;
+    color: green;
+    
+}
+
+.card-panel{
+    background-color: black;
+    border:  dotted 2px green;
+}
+
+.input-field.col .prefix ~ label, .input-field.col .prefix ~ .validate ~ label{
+    color: green;
+    
+}
+
+.btn-large{
+    color: green;
+    background-color: black;
+    border: solid 2px green;
+}
+
+.btn-large:hover{
+    color: black;
+    background-color: green;
+}
+
+
 
