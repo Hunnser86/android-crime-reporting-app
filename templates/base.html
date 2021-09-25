@@ -35,13 +35,13 @@
                     <li><a href="#">Crime Categories</a></li>
                     <li><a href="#">Log Out</a></li>
                     <li><a href="#">Log In</a></li>
-                    <li><a href="#">Register</a></li>
+                    <li><a href="{{ url_for('register') }}">Register</a></li>
                    
                 </ul>
             </div>
         </nav>
 
-        <!--Mobil sidebar-->
+        <!--Mobile sidebar-->
         <ul class="sidenav" id="mobile-demo">
             <li><h4 class="center-align mobile-li">Report Manager</h4></li>
             <li><a href="{{ url_for('get_reports') }}">Home</a></li>
@@ -50,7 +50,7 @@
             <li><a href="#">Crime Categories</a></li>
             <li><a href="#">Log Out</a></li>
             <li><a href="#">Log In</a></li>
-            <li><a href="#">Register</a></li>
+            <li><a href="{{ url_for('register') }}">Register</a></li>
         </ul>
 
     </header>
