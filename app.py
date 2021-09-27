@@ -1,9 +1,9 @@
 import os
 from flask import (
-    Flask, flash, render_template, redirect, 
+    Flask, flash, render_template, redirect,
     request, session, url_for)
 from flask_pymongo import PyMongo
-from bson.objectid import ObjectId 
+from bson.objectid import ObjectId
 from werkzeug.security import generate_password_hash, check_password_hash
 if os.path.exists("env.py"):
     import env
@@ -40,8 +40,9 @@ def register():
 
         register = {
             "username": request.form.get("username").lower(),
-            "password": generate_password_hash(request.form.get("password")) 
-        }
+            "password": generate_password_hash(request.form.get("password"))
+            }
+    
         mongo.db.users.insert_one(register)
 
         # put the new user into 'session' cookie

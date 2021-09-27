@@ -2,84 +2,95 @@
 body {
     background-color: black;
     font-family: 'Space Mono', monospace;
+    border: solid 5px green;
+    height: 100vh;
 }
 
-.nav{
+.nav {
     background-color: black;
+    margin-bottom: 100px;
 }
 
-nav .brand-logo{
+nav .brand-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-left: 15px;
     color: green;
 }
 
-nav ul{
-    margin-right: 15px;
+nav ul {
+    margin-right: 5px;
+
 }
 
- ul li a {
+ul li a {
+    border: dotted 1px green;
     color: green;
 }
 
-.fa-bars:before{
+ul li a:hover {
+    color: black;
+    background-color: green;
+}
+
+.fa-bars:before {
     color: green;
 }
 
-.sidenav{
+.sidenav {
     background-color: green;
     color: black;
 }
 
-.mobile-li{
+.mobile-li {
     color: black;
 }
 
-.flashes h4{
+.flashes h4 {
     line-height: 2;
 }
 
 
 /*Registration page*/
 
-.welcome-div{
+.welcome-div {
     margin-top: 60px;
     border: dotted 2px green;
 }
 
-h3{
+h3 {
     color: green;
 }
 
-h4{
+h4 {
     color: green;
 }
 
-.form-div{
+.form-div {
     margin-top: 60px;
     color: green;
-    
+
 }
 
-.card-panel{
+.card-panel {
     background-color: black;
-    border:  dotted 2px green;
+    border: dotted 2px green;
 }
 
-.input-field.col .prefix ~ label, .input-field.col .prefix ~ .validate ~ label{
+.input-field.col .prefix~label,
+.input-field.col .prefix~.validate~label {
     color: green;
-    
+
 }
 
-.btn-large{
+.btn-large {
     color: green;
     background-color: black;
     border: solid 2px green;
 }
 
-.btn-large:hover{
+.btn-large:hover {
     color: black;
     background-color: green;
 }
-
-
-
