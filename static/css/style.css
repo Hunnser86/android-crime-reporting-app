@@ -2,13 +2,15 @@
 body {
     background-color: black;
     font-family: 'Space Mono', monospace;
-    border: solid 5px green;
+    border: solid 80px green;
     height: 100vh;
+    
 }
 
 .nav {
     background-color: black;
-    margin-bottom: 100px;
+    margin-bottom: 40px;
+    margin-top: 10px;
 }
 
 nav .brand-logo {
@@ -20,7 +22,7 @@ nav .brand-logo {
 }
 
 nav ul {
-    margin-right: 5px;
+    margin-right: 10px;
 
 }
 
@@ -38,6 +40,13 @@ ul li a:hover {
     color: green;
 }
 
+.home{
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .sidenav {
     background-color: green;
     color: black;
@@ -51,11 +60,17 @@ ul li a:hover {
     line-height: 2;
 }
 
+/*Home page*/
+
+.report-heading{
+    text-decoration: underline dotted 2px green;
+}
+
 
 /*Registration page*/
 
 .welcome-div {
-    margin-top: 60px;
+    margin-top: 20px;
     border: dotted 2px green;
 }
 
@@ -76,6 +91,7 @@ h4 {
 .card-panel {
     background-color: black;
     border: dotted 2px green;
+    padding: 50px;
 }
 
 .input-field.col .prefix~label,
@@ -87,10 +103,35 @@ h4 {
 .btn-large {
     color: green;
     background-color: black;
-    border: solid 2px green;
+    border: dotted 2px green;
+    margin: 10px;
 }
 
 .btn-large:hover {
     color: black;
     background-color: green;
+}
+
+.reg-link{
+    color: green;
+}
+
+.reg-link:hover{
+    border: dotted 2px green;
+}
+
+
+
+
+/*Report page*/
+
+.report-box{
+    border: dotted 2px green;
+    padding: 20px;
+}
+
+.reports{
+    
+    color: green;
+    padding: 20px;
 }

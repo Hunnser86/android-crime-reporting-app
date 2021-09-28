@@ -20,11 +20,22 @@ app.secret_key = os.environ.get("SECRET_KEY")
 mongo = PyMongo(app)
 
 
+@app.route("/home")
+def go_home():
+    return render_template("home.html")
+
+
 @app.route("/")
 @app.route("/get_reports")
 def get_reports():
     reports = mongo.db.reports.find()
     return render_template("reports.html", reports=reports)
+
+
+"""
+Functionality for registering.  Taken from the task manager walkthrough project
+
+"""
 
 
 @app.route("/register", methods=["GET", "POST"])
@@ -35,7 +46,8 @@ def register():
             {"username": request.form.get("username").lower()})
 
         if existing_user:
-            flash("Username already exists. Do not attempt to user another officer's credentials!")
+            flash(
+            "Username already exists. Do not attempt to user another officer's credentials!")
             return redirect(url_for("register"))
 
         register = {
@@ -48,7 +60,54 @@ def register():
         # put the new user into 'session' cookie
         session["user"] = request.form.get("username").lower()
         flash("Officer Registration Complete")       
-    return render_template("register.html")   
+    return render_template("register.html")
+
+
+"""
+Functonality for login. Taken from the task manager walkthrough project
+"""
+
+
+@app.route("/login", methods=["GET", "POST"])
+def login():
+    if request.method == "POST":
+        # check if username exists in db
+        existing_user = mongo.db.users.find_one(
+            {"username": request.form.get("username").lower()})
+
+        if existing_user:
+            # ensure hashed password matches user input
+            if check_password_hash(
+                    existing_user["password"], request.form.get("password")):
+                session["user"] = request.form.get("username").lower()
+                flash("Welcome, {}".format(
+                            request.form.get("username")))
+                return redirect(url_for(
+                            "profile", username=session["user"]))
+            else:
+                # invalid password match
+                flash("Incorrect Username and/or Password")
+                return redirect(url_for("login"))
+
+        else:
+            # username doesn't exist
+            flash("Incorrect Username and/or Password")
+            return redirect(url_for("login"))
+
+    return render_template("login.html")
+
+
+"""
+Functonality for logout. Taken from the task manager walkthrough project
+"""
+
+
+@app.route("/logout")
+def logout():
+    # remove user from session cookie
+    flash("You have been logged out")
+    session.pop("user")
+    return redirect(url_for("login"))
 
 
 if __name__ == "__main__":

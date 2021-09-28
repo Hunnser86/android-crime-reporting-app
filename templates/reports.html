@@ -1,12 +1,23 @@
 {% extends "base.html" %}
 {% block content %}
 
-        
+<div class="row">
+    <div class="col s12 m8 offset-m2 welcome-div">
+        <h3 class="center-align">Welcome Officer</h3>
+        <h4 class="center-align">Here are the most recent reports</h4>
+    </div>
+</div>
+
+<div class="row report-box">
     {% for report in reports %}
-        {{ report.report_name }}<br>
-        {{ report.crime_name }}<br>
-        {{ report.report_description }}<br>
-        {{ report.crime_status }}<br>
+    <h6 class="report-heading">{{ report.report_name }}</h6>
+    <p>Crime Category: {{ report.crime_name }}</p>
+    <p>Crime Status: {{ report.crime_status }}</p>
+    <p>Report Description: </p>{{ report.report_description }} <br>
+
     {% endfor %}
+</div>
+
+
 
 {% endblock %}

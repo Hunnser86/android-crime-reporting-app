@@ -26,15 +26,12 @@
         <!--Top Navbar-->
         <nav class="nav-extended nav">
             <div class="nav-wrapper">
-                <a href="{{ url_for('get_reports') }}" class="brand-logo ">Android Crime Mainframe</a>
+                <a href="{{ url_for('go_home') }}" class="brand-logo ">Android Crime Mainframe</a>
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>
                 <ul class="right hide-on-med-and-down">
-                    <li><a href="{{ url_for('get_reports') }}">Home</a></li>
-                    <li><a href="#">Profile</a></li>
+                    <li><a href="{{ url_for('go_home') }}" class="home">Home</a></li>
                     <li><a href="#">Report a Crime</a></li>
-                    <li><a href="#">Known Androids</a></li>
-                    <li><a href="#">Log Out</a></li>
-                    <li><a href="#">Log In</a></li>
+                    <li><a href="{{ url_for('logout') }}">Log Out</a></li>
                     <li><a href="{{ url_for('register') }}">Register</a></li>
                    
                 </ul>
@@ -44,12 +41,9 @@
         <!--Mobile sidebar-->
         <ul class="sidenav" id="mobile-demo">
             <li><h4 class="center-align mobile-li">Report Manager</h4></li>
-            <li><a href="{{ url_for('get_reports') }}">Home</a></li>
-            <li><a href="#">Profile</a></li>
-            <li><a href="#">Report a Crime</a></li>
-            <li><a href="#">Known Androids</a></li>
-            <li><a href="#">Log Out</a></li>
-            <li><a href="#">Log In</a></li>
+            <li><a href="{{ url_for('go_home') }}" class="home">Home</a></li>
+            <li><a href="{{ url_for('get_reports') }}">Report a Crime</a></li>
+            <li><a href="{{ url_for('logout') }}">Log Out</a></li>
             <li><a href="{{ url_for('register') }}">Register</a></li>
         </ul>
 
@@ -67,6 +61,7 @@
             {% endif %}
         {% endwith %}
     </section>
+
 
     <main class="container reports">
         {% block content %}
