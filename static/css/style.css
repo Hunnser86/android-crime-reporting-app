@@ -1,19 +1,21 @@
 /*Main Styles*/
 body {
     background-color: black;
-    font-family: 'Space Mono', monospace;
-    
+    font-family: 'Share Tech Mono', monospace;
+    border: solid 80px green;
     height: 100vh;
-    
-}
-h1{
-   color: green; 
+
 }
 
 .nav {
-    background-color: black;
     margin-bottom: 40px;
     margin-top: 10px;
+    
+}
+
+.nav-wrapper {
+    background-color: black;
+
 }
 
 nav .brand-logo {
@@ -22,6 +24,7 @@ nav .brand-logo {
     align-items: center;
     margin-left: 15px;
     color: green;
+    
 }
 
 nav ul {
@@ -43,7 +46,7 @@ ul li a:hover {
     color: green;
 }
 
-.home{
+.home {
     width: 100px;
     display: flex;
     justify-content: center;
@@ -63,78 +66,44 @@ ul li a:hover {
     line-height: 2;
 }
 
+.page_title{
+    color: green;
+}
+
 /*Home page*/
 
-.report-heading{
-    text-decoration: underline dotted 2px green;
-}
-
-
-/*Registration page*/
-
-.welcome-div {
-    margin-top: 20px;
-    border: dotted 2px green;
-}
-
-h3 {
-    color: green;
-}
-
-h4 {
-    color: green;
-}
-
-.form-div {
-    margin-top: 60px;
-    color: green;
-
-}
-
-.card-panel {
+.card{
     background-color: black;
     border: dotted 2px green;
-    padding: 50px;
-}
-
-.input-field.col .prefix~label,
-.input-field.col .prefix~.validate~label {
-    color: green;
-
-}
-
-.btn-large {
-    color: green;
-    background-color: black;
-    border: dotted 2px green;
-    margin: 10px;
-}
-
-.btn-large:hover {
-    color: black;
-    background-color: green;
-}
-
-.reg-link{
-    color: green;
-}
-
-.reg-link:hover{
-    border: dotted 2px green;
-}
-
-
-
-
-/*Report page*/
-
-.report-box{
-    border: dotted 2px green;
-    padding: 20px;
-}
-
-.reports{
     
-    color: green;
-    padding: 20px;
 }
+
+.card-content{
+    color: green;
+}
+
+.card-title{
+    text-decoration: underline dotted 2px green;
+    text-align: center;
+}
+
+.btn-large{
+    margin-top: 20px;
+    min-width: 200px;
+    background-color: black;
+    border: dotted 2px green;
+    color: green;
+    margin: 20px;
+}
+
+.btn-large:hover{
+    background-color: green;
+    color: black;
+}
+
+
+
+
+
+
+
