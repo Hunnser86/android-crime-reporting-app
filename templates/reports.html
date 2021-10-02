@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block content %}
+
+{% for report in reports %}
+
+{{ report.crime_name }}<br>
+{{ report.report_name }}<br>
+{{ report.android_name }}<br>
+{{ report.occupation }}<br>
+{{ report.report_description }}<br>
+{{ report.crime_status }}<br>
+
+{% endfor %}
+<ul class="collapsible">
+    <li>
+        <div class="collapsible-header"><i class="fas fa-caret-down"></i>First</div>
+        <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+    </li>
+    <li>
+        <div class="collapsible-header"><i class="fas fa-caret-down"></i>Second</div>
+        <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+    </li>
+    <li>
+        <div class="collapsible-header"><i class="fas fa-caret-down"></i>Third</div>
+        <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+    </li>
+</ul>
+
+
+{% endblock %}

@@ -25,6 +25,17 @@ def go_home():
     return render_template("home.html")
 
 
+@app.route("/get_reports")
+def get_reports():
+    reports = mongo.db.reports.find()
+    return render_template("reports.html", reports=reports)
+    
+
+@app.route("/add_report")
+def add_report():
+    return render_template("add_report.html")
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
