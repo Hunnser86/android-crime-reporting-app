@@ -1,3 +1,10 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
 /*Main Styles*/
 body {
     background-color: black;
@@ -94,12 +101,15 @@ ul li a:hover {
     border: dotted 2px green;
     color: green;
     margin: 20px;
+    
 }
 
 .btn-large:hover{
     background-color: green;
     color: black;
 }
+
+
 
 /*Add reports page*/
 

@@ -1,9 +1,10 @@
 import os
 from flask import (
     Flask, flash, render_template,
-     redirect, request, session, url_for)
+    redirect, request, session, url_for)
 from flask_pymongo import PyMongo
-from bson.objectid import ObjectId 
+from bson.objectid import ObjectId
+from dataclasses import dataclass, field
 if os.path.exists("env.py"):
     import env
 
@@ -25,14 +26,24 @@ def go_home():
     return render_template("home.html")
 
 
+@dataclass(frozen=True)
+class Report:
+    crime_name: str 
+    android_name: str
+    unit_name: str
+    occupation: str
+    crime_status: str
+    report_description: str
+
+
 @app.route("/get_reports")
 def get_reports():
     reports = mongo.db.reports.find()
     return render_template("reports.html", reports=reports)
-    
+
 
 @app.route("/add_report")
-def add_report():
+def add_report(Report):
     return render_template("add_report.html")
 
 
