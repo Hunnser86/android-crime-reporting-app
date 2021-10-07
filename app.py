@@ -28,7 +28,7 @@ def go_home():
 
 @dataclass(frozen=True)
 class Report:
-    crime_name: str 
+    crime_type: str
     android_name: str
     unit_name: str
     occupation: str
