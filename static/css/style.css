@@ -74,6 +74,7 @@ ul li a:hover {
 }
 
 .page_title{
+    text-decoration: underline dotted 2px green;
     color: green;
 }
 
@@ -113,7 +114,33 @@ ul li a:hover {
 
 /*Add reports page*/
 
+.report-title{
+    
+    margin-bottom: 30px;
+}
 
+
+.collapsible-header{
+    background-color: black;
+    color: green;
+    border: dotted 2px green;
+    max-width: 600px;
+}
+
+
+.collapsible-body{
+    color:green;
+    border: dotted 2px green;
+    max-width: 600px;
+}
+
+ul.collapsible{
+    border: none;
+}
+
+li.active{
+    border: none;
+}
 
 
 

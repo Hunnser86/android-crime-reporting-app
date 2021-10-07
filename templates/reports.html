@@ -1,29 +1,27 @@
 {% extends "base.html" %}
 {% block content %}
 
-{% for report in reports %}
 
-{{ report.crime_name }}<br>
-{{ report.report_name }}<br>
-{{ report.android_name }}<br>
-{{ report.occupation }}<br>
-{{ report.report_description }}<br>
-{{ report.crime_status }}<br>
+<div class="row center-align s12 m8 offset-m2 report-title">
+    <h2 class="page_title">Please Read Through Any Reports</h2>
+    <h3 class="page_title ">To Attain Evidence For Current Cases</h3>
+</div>
 
-{% endfor %}
-<ul class="collapsible">
+<ul class="collapsible ">
+    {% for report in reports %}
     <li>
-        <div class="collapsible-header"><i class="fas fa-caret-down"></i>First</div>
-        <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+        <div class="collapsible-header row s12 m8 offset-m2"><i class="fas fa-caret-down"></i>
+            <strong>{{ report.report_name }}</strong>
+        </div>
+        <div class="collapsible-body row s12 m8 offset-m2">
+            <strong>CRIME TYPE: {{ report.crime_name }}</strong>
+            <p>ANDROID NAME: {{ report.android_name }}</p>
+            <p>OCCUPATION: {{ report.occupation }}</p>
+            <p>CRIME STATUS: {{ report.crime_status }}</p>
+            <p>REPORT DESCRIPTION: <br><br>{{ report.report_description }}</p>
+        </div>
     </li>
-    <li>
-        <div class="collapsible-header"><i class="fas fa-caret-down"></i>Second</div>
-        <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-    </li>
-    <li>
-        <div class="collapsible-header"><i class="fas fa-caret-down"></i>Third</div>
-        <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-    </li>
+    {% endfor %}
 </ul>
 
 
