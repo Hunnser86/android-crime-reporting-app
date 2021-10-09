@@ -9,7 +9,7 @@
 body {
     background-color: black;
     font-family: 'Share Tech Mono', monospace;
-    border: solid 80px green;
+   /* border: solid 10px green;*/
     height: 100vh;
 
 }
@@ -112,7 +112,7 @@ ul li a:hover {
 
 
 
-/*Add reports page*/
+/*reports page*/
 
 .report-title{
     
@@ -141,6 +141,44 @@ ul.collapsible{
 li.active{
     border: none;
 }
+
+
+/*add reports page*/
+
+.input-field{
+    color: green;
+    border: dotted 2px green;
+    margin-top: 0;
+}
+
+label{
+    color: green;
+    font-size: 1.5rem;
+}
+
+.validate{
+    color: green;
+}
+
+#report_name{
+    font-family: 'Share Tech Mono', monospace;
+}
+#crime_type{
+    font-family: 'Share Tech Mono', monospace;
+}
+#android_name{
+    font-family: 'Share Tech Mono', monospace;
+}
+#occupation{
+    font-family: 'Share Tech Mono', monospace;
+}
+#crime_status{
+    font-family: 'Share Tech Mono', monospace;
+}
+#report_description{
+    font-family: 'Share Tech Mono', monospace;
+}
+
 
 
 

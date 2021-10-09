@@ -42,8 +42,21 @@ def get_reports():
     return render_template("reports.html", reports=reports)
 
 
-@app.route("/add_report")
-def add_report(Report):
+@app.route("/add_report", methods=["GET", "POST"])
+def add_report():
+    if request.method == "POST":
+        report = {
+            "report_name": request.form.get("report_name"),
+            "crime_type": request.form.get("crime_type"),
+            "android_name": request.form.get("android_name"),
+            "occupation": request.form.get("occupation"),
+            "crime_status": request.form.get("crime_status"),
+            "report_description": request.form.get("report_description")
+
+        }
+        mongo.db.reports.insert_one(report)
+        flash("Report Added Successfully")
+        return redirect(url_for("go_home"))
     return render_template("add_report.html")
 
 

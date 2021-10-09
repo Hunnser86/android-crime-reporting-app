@@ -3,5 +3,60 @@
 
 <h1 class="page_title center-align">Please Add New Reports Below</h1>
 
-
+<form class="col s12" action="{{ url_for('add_report') }}" method="POST">
+    <!--Report Name-->
+    <div class="row">
+        <label class="col s12 m8 offset-m2" for="report_name">Report Name:</label>
+        <div class="input-field col s12 m8 offset-m2">
+            <input id="report_name" name="report_name" minlength="5" maxlength="50" type="text" class="validate"
+                required>
+        </div>
+    </div>
+    <!--Crime Type-->
+    <div class="row">
+        <label class="col s12 m8 offset-m2" for="crime_type">Crime Type:</label>
+        <div class="input-field col s12 m8 offset-m2">
+            <input id="crime_type" name="crime_type" minlength="5" maxlength="50" type="text" class="validate" required>
+        </div>
+    </div>
+    <!--Android Name-->
+    <div class="row">
+        <label class="col s12 m8 offset-m2" for="android_name">Android Name:</label>
+        <div class="input-field col s12 m8 offset-m2">
+            <input id="android_name" name="android_name" minlength="5" maxlength="50" type="text" class="validate"
+                required>
+        </div>
+    </div>
+    <!--Occupation-->
+    <div class="row">
+        <label class="col s12 m8 offset-m2" for="occupation">Occupation:</label>
+        <div class="input-field col s12 m8 offset-m2">
+            <input id="occupation" name="occupation" minlength="5" maxlength="50" type="text" class="validate" required>
+        </div>
+    </div>
+    <!--Crime Status-->
+    <div class="row">
+        <label class="col s12 m8 offset-m2" for="crime_status">Crime Status:</label>
+        <div class="input-field col s12 m8 offset-m2">
+            <input id="crime_status" name="crime_status" minlength="5" maxlength="50" type="text" class="validate"
+                required>
+        </div>
+    </div>
+    <!--Report Details-->
+    <div class="row">
+        <label class="col s12 m8 offset-m2" for="report_description">Report Details:</label>
+        <div class="input-field col s12 m8 offset-m2">
+            <textarea id="report_description" name="report_description" minlength="15" maxlength="500"
+                class="materialize-textarea validate" required></textarea>
+        </div>
+    </div>
+    <!--Submit Button-->
+    <div class="row">
+        <div class="col s12 center-align">
+            <button type="submit" class="btn-large">
+                Submit Report
+            </button>
+        </div>
+    </div>
+</form>
 {% endblock %}
