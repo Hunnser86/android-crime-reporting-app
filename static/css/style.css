@@ -9,9 +9,7 @@
 body {
     background-color: black;
     font-family: 'Share Tech Mono', monospace;
-   /* border: solid 10px green;*/
-    height: 100vh;
-
+    
 }
 
 .nav {

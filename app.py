@@ -57,6 +57,7 @@ def add_report():
         mongo.db.reports.insert_one(report)
         flash("Report Added Successfully")
         return redirect(url_for("go_home"))
+        
     return render_template("add_report.html")
 
 
