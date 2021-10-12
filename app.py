@@ -55,6 +55,12 @@ def report_success():
     return render_template("report_success.html")
 
 
+@app.route("/edit_report/<report_id>", methods=["GET", "POST"])
+def edit_report(report_id):
+    report = mongo.db.reports.find_one({"_id": ObjectId(report_id)})
+    return render_template("edit_report.html", report=report)
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
