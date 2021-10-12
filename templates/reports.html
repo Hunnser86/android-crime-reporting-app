@@ -10,8 +10,14 @@
 <ul class="collapsible ">
     {% for report in reports %}
     <li>
-        <div class="collapsible-header row s12 m8 offset-m2"><i class="fas fa-caret-down"></i>
+        <div class="collapsible-header row s12 m8 offset-m2">
+            <i class="fas fa-caret-down"></i>
             <strong>{{ report.report_name }}</strong>
+            <div class="col s7">
+                <a href="" class="btn-small">Remove Report</a>
+                <a href="" class="btn-small">Edit Report</a>
+            </div>
+            
         </div>
         <div class="collapsible-body row s12 m8 offset-m2">
             <strong>CRIME TYPE: {{ report.crime_type }}</strong>

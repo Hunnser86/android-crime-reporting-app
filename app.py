@@ -26,16 +26,6 @@ def go_home():
     return render_template("home.html")
 
 
-@dataclass(frozen=True)
-class Report:
-    crime_type: str
-    android_name: str
-    unit_name: str
-    occupation: str
-    crime_status: str
-    report_description: str
-
-
 @app.route("/get_reports")
 def get_reports():
     reports = mongo.db.reports.find()
@@ -55,10 +45,14 @@ def add_report():
 
         }
         mongo.db.reports.insert_one(report)
-        flash("Report Added Successfully")
-        return redirect(url_for("go_home"))
+        return redirect(url_for("report_success"))
         
     return render_template("add_report.html")
+
+
+@app.route("/report_success")
+def report_success():
+    return render_template("report_success.html")
 
 
 if __name__ == "__main__":

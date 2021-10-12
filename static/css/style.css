@@ -177,9 +177,27 @@ label{
     font-family: 'Share Tech Mono', monospace;
 }
 
+/*add reports page*/
+
+.success-title{
+    text-decoration: none;
+    margin-top: 80px;
+}
 
 
+/*View Reports page*/
 
+.btn-small{
+    margin-top: 20px;
+    min-width: 100px;
+    background-color: black;
+    border: dotted 2px green;
+    color: green;
+        
+}
 
-
+.btn-small:hover{
+    background-color: green;
+    color: black;
+}
 
