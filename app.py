@@ -55,10 +55,31 @@ def report_success():
     return render_template("report_success.html")
 
 
+@app.route("/edit_success")
+def edit_success():
+    return render_template("edit_success.html")
+
+
 @app.route("/edit_report/<report_id>", methods=["GET", "POST"])
 def edit_report(report_id):
+    if request.method == "POST":
+        edit = {
+            "report_name": request.form.get("report_name"),
+            "crime_type": request.form.get("crime_type"),
+            "android_name": request.form.get("android_name"),
+            "occupation": request.form.get("occupation"),
+            "crime_status": request.form.get("crime_status"),
+            "report_description": request.form.get("report_description")
+
+        }
+        mongo.db.reports.update({"_id": ObjectId(report_id)}, edit)
+        return redirect(url_for("edit_success"))
+
     report = mongo.db.reports.find_one({"_id": ObjectId(report_id)})
     return render_template("edit_report.html", report=report)
+
+
+
 
 
 if __name__ == "__main__":
