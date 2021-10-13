@@ -8,7 +8,7 @@
     <div class="row">
         <label class="col s12 m8 offset-m2" for="report_name">Report Name:</label>
         <div class="input-field col s12 m8 offset-m2">
-            <input id="report_name" name="report_name" minlength="5" maxlength="50" pattern="^[a-zA-Z]$" type="text" class="validate"
+            <input id="report_name" name="report_name" minlength="5" maxlength="50" pattern="[a-zA-Z0-9 ]+" type="text" class="validate"
                 required>
         </div>
     </div>
@@ -16,14 +16,14 @@
     <div class="row">
         <label class="col s12 m8 offset-m2" for="crime_type">Crime Type:</label>
         <div class="input-field col s12 m8 offset-m2">
-            <input id="crime_type" name="crime_type" minlength="5" maxlength="50" pattern="^[a-zA-Z]$" type="text" class="validate" required>
+            <input id="crime_type" name="crime_type" minlength="5" maxlength="50" pattern="[a-zA-Z0-9 ]+" type="text" class="validate" required>
         </div>
     </div>
     <!--Android Name-->
     <div class="row">
         <label class="col s12 m8 offset-m2" for="android_name">Android Name:</label>
         <div class="input-field col s12 m8 offset-m2">
-            <input id="android_name" name="android_name" minlength="5" maxlength="50" pattern="^[a-zA-Z]$" type="text" class="validate"
+            <input id="android_name" name="android_name" minlength="5" maxlength="50" pattern="[a-zA-Z0-9 ]+" type="text" class="validate"
                 required>
         </div>
     </div>
@@ -31,14 +31,14 @@
     <div class="row">
         <label class="col s12 m8 offset-m2" for="occupation">Occupation:</label>
         <div class="input-field col s12 m8 offset-m2">
-            <input id="occupation" name="occupation" minlength="5" maxlength="50" pattern="^[a-zA-Z]$" type="text" class="validate" required>
+            <input id="occupation" name="occupation" minlength="5" maxlength="50" pattern="[a-zA-Z0-9 ]+"  type="text" class="validate" required>
         </div>
     </div>
     <!--Crime Status-->
     <div class="row">
         <label class="col s12 m8 offset-m2" for="crime_status">Crime Status:</label>
         <div class="input-field col s12 m8 offset-m2">
-            <input id="crime_status" name="crime_status" minlength="5" maxlength="50" pattern="^[a-zA-Z]$" type="text" class="validate"
+            <input id="crime_status" name="crime_status" minlength="5" maxlength="50" pattern="[a-zA-Z0-9 ]+" type="text" class="validate"
                 required>
         </div>
     </div>
@@ -47,7 +47,7 @@
         <label class="col s12 m8 offset-m2" for="report_description">Report Details:</label>
         <div class="input-field col s12 m8 offset-m2">
             <textarea id="report_description" name="report_description" minlength="15" maxlength="500"
-            pattern="^[a-zA-Z0-9]{5,15}$" class="materialize-textarea validate" required></textarea>
+            pattern="[a-zA-Z0-9 ]+" class="materialize-textarea validate" required></textarea>
         </div>
     </div>
     <!--Submit Button-->
