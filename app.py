@@ -80,6 +80,14 @@ def edit_report(report_id):
 
 
 
+@app.route("/remove_success")
+def remove_success():
+    return render_template("remove_success.html")
+
+@app.route("/remove_report/<report_id>")
+def remove_report(report_id):
+    mongo.db.reports.remove({"_id": ObjectId(report_id)})
+    return redirect(url_for("remove_success"))
 
 
 if __name__ == "__main__":
