@@ -1,4 +1,5 @@
 import os
+import json
 from flask import (
     Flask, flash, render_template,
     redirect, request, session, url_for)
@@ -88,6 +89,14 @@ def remove_success():
 def remove_report(report_id):
     mongo.db.reports.remove({"_id": ObjectId(report_id)})
     return redirect(url_for("remove_success"))
+
+
+@app.route("/known_androids")
+def known_androids():
+    data = []
+    with open("data/droids.json", "r") as json_data:
+        data = json.load(json_data)
+    return render_template("known_androids.html", page="known_androids", droids=data)
 
 
 if __name__ == "__main__":

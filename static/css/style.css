@@ -201,3 +201,11 @@ label{
     color: black;
 }
 
+/*known androids page*/
+
+.card-title{
+    color: green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

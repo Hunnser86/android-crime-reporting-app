@@ -1,0 +1,42 @@
+[
+    {
+        "name": "Jack Quacker",
+        "location": "New York",
+        "occupation": "Manual worker",
+        "detention status": "Retired",
+        "previous crimes": "Petit theft, Murder one",
+        "image_source": "https://images.pexels.com/photos/8382619/pexels-photo-8382619.jpeg?cs=srgb&dl=pexels-cottonbro-8382619.jpg&fm=jpg"
+        
+        
+    },
+    {
+        "name": "Zuul Gozer",
+        "location": "New York",
+        "occupation": "Cat Burgler",
+        "detention status": "Retired",
+        "previous crimes": "Burglary",
+        "image_source": "https://images.pexels.com/photos/7266013/pexels-photo-7266013.jpeg?cs=srgb&dl=pexels-cottonbro-7266013.jpg&fm=jpg"
+        
+        
+    },
+    {
+        "name": "Jeremia Fullgut",
+        "location": "Jersey",
+        "occupation": "Insurance Droid",
+        "detention status": "Detained",
+        "previous crimes": "N/A",
+        "image_source": "https://images.pexels.com/photos/5514853/pexels-photo-5514853.jpeg?cs=srgb&dl=pexels-ivan-samkov-5514853.jpg&fm=jpg"
+        
+        
+    },
+    {
+        "name": "Carla Nightflyer",
+        "location": "Oregon",
+        "occupation": "Companion Droid",
+        "detention status": "N/A",
+        "previous crimes": "Posession",
+        "image_source": "https://images.pexels.com/photos/5514853/pexels-photo-5514853.jpeg?cs=srgb&dl=pexels-ivan-samkov-5514853.jpg&fm=jpg"
+        
+        
+    }
+]
