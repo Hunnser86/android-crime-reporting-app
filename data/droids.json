@@ -38,5 +38,25 @@
         "image_source": "https://images.pexels.com/photos/5514853/pexels-photo-5514853.jpeg?cs=srgb&dl=pexels-ivan-samkov-5514853.jpg&fm=jpg"
         
         
+    },
+    {
+        "name": "Jimmy The Clamp",
+        "location": "Sunnyvale",
+        "occupation": "Gangster Bot",
+        "detention status": "Retired",
+        "previous crimes": "Assault, Clamping without a licence",
+        "image_source": "https://images.pexels.com/photos/5514853/pexels-photo-5514853.jpeg?cs=srgb&dl=pexels-ivan-samkov-5514853.jpg&fm=jpg"
+        
+        
+    },
+    {
+        "name": "Arnold 6",
+        "location": "Chicago",
+        "occupation": "Extermination",
+        "detention status": "Fugitive",
+        "previous crimes": "Blender theft, public exposure",
+        "image_source": "https://images.pexels.com/photos/1097456/pexels-photo-1097456.jpeg?cs=srgb&dl=pexels-sebastiaan-stam-1097456.jpg&fm=jpg"
+        
+        
     }
 ]
