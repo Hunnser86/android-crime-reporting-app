@@ -209,3 +209,89 @@ label{
     justify-content: center;
     align-items: center;
 }
+
+/*media queries*/
+
+
+@media only screen and (max-width: 320px){
+    .page_title{
+        font-size: 2rem;
+        text-align: center;
+    }
+    nav .brand-logo{
+        position: absolute;
+        font-size: 0.75rem;
+        left: 100px;
+    }
+    .btn-small{
+        height: 70px;
+    }
+}
+@media only screen and (max-width: 370px){
+    .page_title{
+        font-size: 2rem;
+        text-align: center;
+    }
+    nav .brand-logo{
+        position: absolute;
+        font-size: 0.75rem;
+        left: 100px;
+    }
+    .btn-small{
+        height: 70px;
+    }
+}
+
+
+
+@media only screen and (max-width: 375px){
+    .page_title{
+        font-size: 2rem;
+        text-align: center;
+    }
+    nav .brand-logo{
+        font-size: 0.95rem;
+        margin-left: 0px;
+    }
+    .input-field{
+        min-width: 95%;
+    }
+    
+}
+
+
+
+@media only screen and (max-width: 425px){
+    .page_title{
+        font-size: 2rem;
+        text-align: center;
+    }
+    nav .brand-logo{
+        font-size: 0.95rem;
+        margin-left: 0px;
+    }
+}
+@media only screen and (min-width: 426px){
+    .page_title{
+        font-size: 2rem;
+        text-align: center;
+    }
+    nav .brand-logo{
+        font-size: 0.95rem;
+        margin-left: 0px;
+    }
+}
+
+
+
+
+
+@media only screen and (min-width: 762px){
+    .page_title{
+        font-size: 3rem;
+    }
+    nav .brand-logo{
+        font-size: 2rem;
+        margin-left: 0px;
+    }
+}
