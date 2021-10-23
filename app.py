@@ -35,6 +35,7 @@ def get_reports():
 
 @app.route("/add_report", methods=["GET", "POST"])
 def add_report():
+    crime_type = mongo.db.crime_type.find().sort("crime_type", 1)
     if request.method == "POST":
         report = {
             "report_name": request.form.get("report_name"),
@@ -48,7 +49,7 @@ def add_report():
         mongo.db.reports.insert_one(report)
         return redirect(url_for("report_success"))
         
-    return render_template("add_report.html")
+    return render_template("add_report.html", crime_type=crime_type)
 
 
 @app.route("/report_success")

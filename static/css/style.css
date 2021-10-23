@@ -141,6 +141,8 @@ li.active{
 }
 
 
+
+
 /*add reports page*/
 
 .input-field{
@@ -157,6 +159,32 @@ label{
 .validate{
     color: green;
 }
+
+
+.select-dropdown{
+    background-color: black;
+    color: green;
+    border: dotted 2px green;
+    max-width: 600px;
+    font-family: 'Share Tech Mono', monospace;    
+}
+
+.select-dropdown li span{
+    color: green;
+}
+
+.select-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    color: green;
+    border: dotted 2px green;
+    max-width: 900px;
+    margin: 0 auto;
+    font-family: 'Share Tech Mono', monospace;
+}
+
 
 #report_name{
     font-family: 'Share Tech Mono', monospace;
