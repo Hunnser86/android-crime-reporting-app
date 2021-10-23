@@ -256,6 +256,14 @@ label{
     align-items: center;
 }
 
+
+/*crime details page*/
+.crime_detail{
+    border: dotted 2px green;
+    color: green;
+}
+
+
 /*media queries*/
 
 

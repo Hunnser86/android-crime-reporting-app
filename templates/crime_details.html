@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h1 class="page_title center-align">Crime Details</h1>
+
+<div class="row crime_detail">
+
+    <div class="col s12 m8 offset-m2">
+        
+        {% for report in reports %}
+        <li>
+            <div class="row s12 m8 offset-m2">
+                <i class="fas fa-caret-down"></i>
+                <strong>Report Name: {{ report.report_name }}</strong>
+                <div class="col s7">
+                    <a href="{{ url_for('remove_report', report_id=report._id) }}" class="btn-small delete">Remove Report</a>
+                    <a href="{{ url_for('edit_report', report_id=report._id) }}" class="btn-small">Edit Report</a>
+                </div>
+                
+            </div>
+            <div class="s12 m8 offset-m2">
+                <strong>CRIME TYPE: {{ report.crime_type }}</strong>
+                <p>ANDROID NAME: {{ report.android_name }}</p>
+                <p>OCCUPATION: {{ report.occupation }}</p>
+                <p>CRIME STATUS: {{ report.crime_status }}</p>
+                <p>REPORT DESCRIPTION: <br><br>{{ report.report_description }}</p>
+                
+                <a href="{{ url_for('crime_detail') }}" class="btn-small">More Details</a>
+            </div>
+            
+        </li>
+        {% endfor %}
+        
+    </div>
+
+</div>
+
+
+{% endblock %}

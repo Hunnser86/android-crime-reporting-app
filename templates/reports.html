@@ -12,7 +12,7 @@
     <li>
         <div class="collapsible-header row s12 m8 offset-m2">
             <i class="fas fa-caret-down"></i>
-            <strong>{{ report.report_name }}</strong>
+            <strong>Report Name: {{ report.report_name }}</strong>
             <div class="col s7">
                 <a href="{{ url_for('remove_report', report_id=report._id) }}" class="btn-small delete">Remove Report</a>
                 <a href="{{ url_for('edit_report', report_id=report._id) }}" class="btn-small">Edit Report</a>
@@ -25,7 +25,10 @@
             <p>OCCUPATION: {{ report.occupation }}</p>
             <p>CRIME STATUS: {{ report.crime_status }}</p>
             <p>REPORT DESCRIPTION: <br><br>{{ report.report_description }}</p>
+            
+            <a href="{{ url_for('crime_detail') }}" class="btn-small">More Details</a>
         </div>
+        
     </li>
     {% endfor %}
 </ul>

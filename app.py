@@ -77,7 +77,7 @@ def edit_report(report_id):
         mongo.db.reports.update({"_id": ObjectId(report_id)}, edit)
         return redirect(url_for("edit_success"))
 
-    report = mongo.db.reports.find_one({"_id": ObjectId(report_id)})
+    report = mongo.db.reports.find_one_or_404({"_id": ObjectId(report_id)})
     return render_template("edit_report.html", report=report)
 
 
@@ -97,7 +97,13 @@ def known_androids():
     data = []
     with open("data/droids.json", "r") as json_data:
         data = json.load(json_data)
-    return render_template("known_androids.html", page="known_androids", droids=data)
+    return render_template("known_androids.html", page="known_androids",
+                           droids=data)
+
+
+@app.route("/crime_detail")
+def crime_detail():
+    return render_template("crime_details.html")                     
 
 
 if __name__ == "__main__":
