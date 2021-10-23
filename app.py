@@ -89,7 +89,7 @@ def remove_success():
 @app.route("/remove_report/<report_id>")
 def remove_report(report_id):
     mongo.db.reports.remove({"_id": ObjectId(report_id)})
-    return redirect(url_for("remove_success"))
+    return redirect(url_for("get_reports"))
 
 
 @app.route("/known_androids")

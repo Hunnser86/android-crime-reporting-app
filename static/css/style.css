@@ -205,6 +205,24 @@ label{
     font-family: 'Share Tech Mono', monospace;
 }
 
+/*sweet alert modal*/
+
+.swal2-container.swal2-center>.swal2-popup{
+    background-color: black;
+    color: green;
+    border: dotted 2px green;
+    max-width: 900px;
+    margin: 0 auto;
+    font-family: 'Share Tech Mono', monospace; 
+}
+
+.swal2-styled.swal2-confirm{
+    background-color: black;
+    border: dotted 2px green;
+    color: green;
+    margin: 20px;
+}
+
 /*add reports page*/
 
 .success-title{
