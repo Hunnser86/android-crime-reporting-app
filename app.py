@@ -1,11 +1,10 @@
 import os
 import json
 from flask import (
-    Flask, flash, render_template,
+    Flask, render_template,
     redirect, request, session, url_for)
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
-from dataclasses import dataclass, field
 if os.path.exists("env.py"):
     import env
 
@@ -22,7 +21,6 @@ mongo = PyMongo(app)
 
 
 @app.route("/")
-@app.route("/go_home")
 def go_home():
     return render_template("home.html")
 
