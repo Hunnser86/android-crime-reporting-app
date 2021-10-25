@@ -52,80 +52,49 @@ I expect all of you Scrappers(Officers), will find it easy to navigate and intui
 
   The home page has a welcome message and an explaination of what the site is for.  There are two buttons at the bottom that navigate to the add report and view report pages.
 
-  On the Add Report page, there is a form for the officer to fill in.  There are several 
+  On the Add Report page, there is a form for the officer to fill in.  The form uses validation techniques, to ensure that the information given is what is needed to keep the database consistant.
+
+  Once the form is filled out, the user clicks the submit button at the bottom of the page.  This takes them to a page that says "Report successfully submitted", where the user can then navigate to any of the other pages.
+
+  On the view reports page, the user can read, update and delete reports, using the buttons within the detailed report dropdown.  When a user attempt to delete a report, a modal appears, asking if the user is sure they want to delete the report, just in case the button is pressed accidentally.
+
+  The final page is a known androids page, which details some of the known androids on the database.  Each android is displayed on a card with an image at the top.  The cards also display name, location, occupation, detention status and previous crimes committed by the android. 
 
  ## Design
 ---
    * **Colours**
        
-       * I felt that the game should have a black background.
+       * The site is designed in the retrofuturism style, depicting the old black and green phosperescent monitors from the 80s.  Simple, yet effective, giving great contrast on the screen. 
        
-       * The player is white, so that it stands out on the screen
-
-       * The enemies are random colors that are vibrant 
-
-
-
    * **Typography**
 
-       *  I used the standard Sans serif font for my score in the top left of the screen and Tourney for my modal.
-       I used these fonts as I felt it fit the style of the game.
+       *  I used the 'Share Tech Mono' and 'Monospace' fonts from google fonts.
+        
+          I used these fonts as I felt it fit the art style of the site.
 
    * **Imagery**
 
-     *  The imagery used was a simple black background with colourful enemies to allow for good contrast.
-     I decided to make the modal look like something from windows 95, hence the garish pink and green colour scheme.
+     *  The imagery used was a simple black background with green text.
+        
+     *  The images used for the androids were stock photos from Pexels.
 
 * **Wireframes**
 
-    * I made some simple wireframes in the design process to show how it will look on desktop and mobile.
+    * I made some simple wireframes in the design process to show how it will look.  As you can see, the original idea was a workshop database, for androids that had broken down.
+---
 
-    ![screenshot of the wireframe process](/assets/wireframes/wireframe-1.jpg)
-
-
-    ![Screenshot of Wireframe for desktop](/assets/wireframes/wireframe-2.jpg)
+   ![screenshot of the wireframe process](/assets/wireframes/wireframe-1.png)
 
     
 # Features 
-  ### Start Game
+  ### Welcome Page
      
-* At the beginning of the game, a modal is displayed, with a button that says "start game" 
-
-### End Game
-
-* When the player gets a game over, the modal is displayed once again, with the players score and the start game button. 
-
-### Score
-
-* In the top left corner of the screen, there will be a simple scoreboard, 
-  displaying "Score:0".  This will increment when a player ditroys an enemy. 
-  
-
-### Enemy shrink score
-
-* Players can score more points when destroying large enemies, as each time they are hit
-  they reduce in size, giving the player points as they do so. 
-
-### Random enemies
-
-* The enemies will be randomised in respect to starting position off screen, 
-  their size and their colour. 
+* The first page the user will land on, is the welcome page.  On this page, there is a welcome message, followed by a description of what the site is for.  There is a navbar that is consistant accross all pages, that has links to home, add report, view reports and known androids pages.  Under the message, there are two buttons.  One to add a report and one to view previous reports.
 
 
-### Static Player
+### Add Report Page
 
-* The player will be static in the center of the screen and enemies will approach from all angles. 
-
-### Projectiles 
-
-* The player will be able to shoot projectiles at the enemies. (THANK GOODNESS!!) 
-
-
-### Enemies will explode
-
-* When the enemies are hit, they will produce particles and when 
-  they are destroyed, they will explode in a firework type way.  The 
-  Particles from this will fade over time. 
+* On this page, there is a form for the user to fill out.  There are several categories to choose from in regards to crime type.  The user simply follows the form down to the bottom of the page and submits the report.  There are several validation techniques, to ensure that the user fills out the form correctly.  For example, min and max length, type="text", pattern(a-zA-Z) and the required attribute.  These are used to ensure consistancy of data on the database.
 
 
 # Technologies Used
@@ -137,7 +106,9 @@ I expect all of you Scrappers(Officers), will find it easy to navigate and intui
  
  * [CSS3](https://en.wikipedia.org/wiki/CSS) - Cascading style sheet used to style.
 
- * [JavaScript](https://en.m.wikipedia.org/wiki/JavaScript) - Programming language, used to create almost every aspect of the game.
+ * [JavaScript](https://en.m.wikipedia.org/wiki/JavaScript) - Programming language, used to activate the collapsible side nav and form elements.
+
+ * [Python3](https://en.wikipedia.org/wiki/Python_(programming_language))- Programming language used to create the main app and render the html templates.
  
 
  ## **Frameworks, Libraries and Programs Used**
