@@ -92,17 +92,21 @@ def remove_report(report_id):
 
 @app.route("/known_androids")
 def known_androids():
+    data = mongo.db.known_androids.find()
+    return render_template("known_androids.html", page="known_androids",
+                           data=data, droids=[])
+
+                            
+@app.route("/admin/load_known_androids")
+def load_known_androids():
     data = []
     with open("data/droids.json", "r") as json_data:
         data = json.load(json_data)
-    return render_template("known_androids.html", page="known_androids",
-                           droids=data)
-
-
-@app.route("/crime_detail")
-def crime_detail():
-    return render_template("crime_details.html")                     
-
+    for entry in data:
+        if mongo.db.known_androids.count(entry) == 0:
+            mongo.db.known_androids.insert_one(entry)                           
+    
+    return redirect(url_for("known_androids"))
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),

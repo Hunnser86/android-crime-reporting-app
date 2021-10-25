@@ -58,5 +58,15 @@
         "image_source": "https://images.pexels.com/photos/1097456/pexels-photo-1097456.jpeg?cs=srgb&dl=pexels-sebastiaan-stam-1097456.jpg&fm=jpg"
         
         
+    },
+    {
+        "name": "$$$$$$$$",
+        "location": "Chicago",
+        "occupation": "Extermination",
+        "detention status": "Fugitive",
+        "previous crimes": "Blender theft, public exposure",
+        "image_source": "https://unsplash.it/3000"
+        
+        
     }
 ]

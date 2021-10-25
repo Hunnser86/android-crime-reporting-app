@@ -113,9 +113,9 @@ I expect all of you Scrappers(Officers), will find it easy to navigate and intui
 
  ## **Frameworks, Libraries and Programs Used**
 
- 1. [Tailwind CSS](https://tailwindcss.com/)
+ 1. [Materialize CSS](https://materializecss.com/)
 
-   * I used Tailwind to create the modal that displays the final score and the button for starting the game.
+   * I used Materialize to create the form elements, collapsable elements.
 
  2. [jsdelivr:](https://getbootstrap.com/)   
 

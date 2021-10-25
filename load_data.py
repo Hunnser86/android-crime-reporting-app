@@ -1,15 +1,14 @@
 import os
 import json
-from flask import (
-    Flask, render_template,
-    redirect, request, session, url_for)
-from flask_pymongo import PyMongo
-from bson.objectid import ObjectId
-if os.path.exists("env.py"):
-    import env
+# from flask import (
+#     Flask, render_template,
+#     redirect, request, session, url_for)
 
 
-@app.route("/load_data", methods=["GET", "POST"])
 def load_data():
-    known_android = mongo.db.known_androids.find().sort
-    return render_template("known_androids.html", known_android=known_android)
+    data = []
+    with open("data/droids.json", "r") as json_data:
+        data = json.load(json_data)
+    for entry in data:
+        if mongo.db.known_androids.count(entry) == 0:
+            mongo.db.known_androids.insert_one(entry)

@@ -6,157 +6,35 @@
 <h1 class="page_title center-align">{{ page }}</h1>
 
 <div class="row">
+{% for entry in data %}
     <div class="col s12 m6">
         <div class="card">
             <div class="card-image">
-                <img src="https://images.pexels.com/photos/8382619/pexels-photo-8382619.jpeg?cs=srgb&dl=pexels-cottonbro-8382619.jpg&fm=jpg"
+                <img src="{{ entry.image_source }}"
                     alt="Mug shot of Jack Quacker">
             </div>
-            <span class="card-title">Name: {{ droids[0] ["name"]}}</span>
+            <span class="card-title">Name: {{ entry.name}}</span>
             <div class="card-content">
                 <p>
-                    Location: {{ droids[0] ["location"]}}
+                    Location: {{ entry.location}}
                 </p>
                 <p>
-                    Occupation: {{ droids[0] ["occupation"]}}
+                    Occupation: {{ entry.occupation}}
                 </p>
                 <p>
-                    Detention Status: {{ droids[0] ["detention status"]}}
+                    Detention Status: {{ entry.detention_status}}
                 </p>
                 <p>
-                    Previous Crimes: {{ droids[0] ["previous crimes"]}}
+                    Previous Crimes: {{ entry.previous_crimes}}
                 </p>
 
             </div>
         </div>
     </div>
+    {% endfor %}
+    <hr><hr><hr>
 
-    <div class="col s12 m6">
-        <div class="card">
-            <div class="card-image">
-                <img src="https://images.pexels.com/photos/7266013/pexels-photo-7266013.jpeg?cs=srgb&dl=pexels-cottonbro-7266013.jpg&fm=jpg"
-                    alt="Mug shot of Jack Quacker">
-            </div>
-            <span class="card-title">Name: {{ droids[1] ["name"]}}</span>
-            <div class="card-content">
-                <p>
-                    Location: {{ droids[1] ["location"]}}
-                </p>
-                <p>
-                    Occupation: {{ droids[1] ["occupation"]}}
-                </p>
-                <p>
-                    Detention Status: {{ droids[1] ["detention status"]}}
-                </p>
-                <p>
-                    Previous Crimes: {{ droids[1] ["previous crimes"]}}
-                </p>
 
-            </div>
-        </div>
-    </div>
-</div>
-<div class="row">
-    <div class="col s12 m6">
-        <div class="card">
-            <div class="card-image">
-                <img src="https://images.pexels.com/photos/6266500/pexels-photo-6266500.jpeg?cs=srgb&dl=pexels-tima-miroshnichenko-6266500.jpg&fm=jpg"
-                    alt="Mug shot of Jack Quacker">
-            </div>
-            <span class="card-title">Name: {{ droids[2] ["name"]}}</span>
-            <div class="card-content">
-                <p>
-                    Location: {{ droids[2] ["location"]}}
-                </p>
-                <p>
-                    Occupation: {{ droids[2] ["occupation"]}}
-                </p>
-                <p>
-                    Detention Status: {{ droids[2] ["detention status"]}}
-                </p>
-                <p>
-                    Previous Crimes: {{ droids[2] ["previous crimes"]}}
-                </p>
-
-            </div>
-        </div>
-    </div>
-
-    <div class="col s12 m6">
-        <div class="card">
-            <div class="card-image">
-                <img src="https://images.pexels.com/photos/7299458/pexels-photo-7299458.jpeg?cs=srgb&dl=pexels-cottonbro-7299458.jpg&fm=jpg"
-                    alt="Mug shot of Jack Quacker">
-            </div>
-            <span class="card-title">Name: {{ droids[3] ["name"]}}</span>
-            <div class="card-content">
-                <p>
-                    Location: {{ droids[3] ["location"]}}
-                </p>
-                <p>
-                    Occupation: {{ droids[3] ["occupation"]}}
-                </p>
-                <p>
-                    Detention Status: {{ droids[3] ["detention status"]}}
-                </p>
-                <p>
-                    Previous Crimes: {{ droids[3] ["previous crimes"]}}
-                </p>
-
-            </div>
-        </div>
-    </div>
-</div>
-<div class="row">
-    <div class="col s12 m6">
-        <div class="card">
-            <div class="card-image">
-                <img src="https://images.pexels.com/photos/5475745/pexels-photo-5475745.jpeg?cs=srgb&dl=pexels-anthony-shkraba-5475745.jpg&fm=jpg"
-                    alt="Mug shot of Jack Quacker">
-            </div>
-            <span class="card-title">Name: {{ droids[4] ["name"]}}</span>
-            <div class="card-content">
-                <p>
-                    Location: {{ droids[4] ["location"]}}
-                </p>
-                <p>
-                    Occupation: {{ droids[4] ["occupation"]}}
-                </p>
-                <p>
-                    Detention Status: {{ droids[4] ["detention status"]}}
-                </p>
-                <p>
-                    Previous Crimes: {{ droids[4] ["previous crimes"]}}
-                </p>
-
-            </div>
-        </div>
-    </div>
-
-    <div class="col s12 m6">
-        <div class="card">
-            <div class="card-image">
-                <img src="https://images.pexels.com/photos/1097456/pexels-photo-1097456.jpeg?cs=srgb&dl=pexels-sebastiaan-stam-1097456.jpg&fm=jpg"
-                    alt="Mug shot of Jack Quacker">
-            </div>
-            <span class="card-title">Name: {{ droids[5] ["name"]}}</span>
-            <div class="card-content">
-                <p>
-                    Location: {{ droids[5] ["location"]}}
-                </p>
-                <p>
-                    Occupation: {{ droids[5] ["occupation"]}}
-                </p>
-                <p>
-                    Detention Status: {{ droids[5] ["detention status"]}}
-                </p>
-                <p>
-                    Previous Crimes: {{ droids[5] ["previous crimes"]}}
-                </p>
-
-            </div>
-        </div>
-    </div>
 </div>
 
 
