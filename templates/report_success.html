@@ -1,10 +1,16 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h1 class="page_title center-align success-title">Crime Successfully Reported </h1>
-<h2 class="page_title center-align success-title">Please return to the Report Crime page to add more crimes</h2>
+<h1 class="page_title center-align success-title">
+    Crime Successfully Reported 
+</h1>
+<h2 class="page_title center-align success-title">
+    Please return to the Report Crime page to add more crimes
+</h2>
 
-
+<div class="row center-align s12 m8 offset-m2">
+    <a class="btn-large" href="{{ url_for('add_report') }}">Report Crime</a>
+</div>
 
 
 {% endblock %}

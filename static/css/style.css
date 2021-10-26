@@ -171,7 +171,9 @@ label{
 
 .select-dropdown li span{
     color: green;
+    
 }
+
 
 .select-wrapper{
     display: flex;
@@ -180,7 +182,7 @@ label{
     background-color: black;
     color: green;
     border: dotted 2px green;
-    max-width: 900px;
+    max-width: 66.75%;
     margin: 0 auto;
     font-family: 'Share Tech Mono', monospace;
 }
@@ -256,6 +258,10 @@ label{
     align-items: center;
 }
 
+.card-image img{
+    max-height: 750px;
+}
+
 
 /*crime details page*/
 .crime_detail{
@@ -267,7 +273,7 @@ label{
 /*media queries*/
 
 
-@media only screen and (max-width: 320px){
+@media only screen and (min-width: 320px){
     .page_title{
         font-size: 2rem;
         text-align: center;
@@ -279,6 +285,10 @@ label{
     }
     .btn-small{
         height: 70px;
+    }
+    form{
+        min-width: 100%;
+        align-items: center;
     }
 }
 @media only screen and (max-width: 370px){
@@ -293,6 +303,10 @@ label{
     }
     .btn-small{
         height: 70px;
+    }
+    form{
+        min-width: 100%;
+        align-items: center;
     }
 }
 
@@ -310,6 +324,10 @@ label{
     .input-field{
         min-width: 95%;
     }
+    form{
+        min-width: 100%;
+        align-items: center;
+    }
     
 }
 
@@ -324,6 +342,10 @@ label{
         font-size: 0.95rem;
         margin-left: 0px;
     }
+    form{
+        min-width: 100%;
+        align-items: center;
+    }
 }
 @media only screen and (min-width: 426px){
     .page_title{
@@ -334,10 +356,15 @@ label{
         font-size: 0.95rem;
         margin-left: 0px;
     }
+    
 }
 
 
-
+@media only screen and (max-width: 600px){
+    .select-wrapper{
+        min-width: 100%;
+    }
+}
 
 
 @media only screen and (min-width: 762px){
@@ -348,4 +375,5 @@ label{
         font-size: 2rem;
         margin-left: 0px;
     }
+    
 }

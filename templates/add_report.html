@@ -20,7 +20,7 @@
         <select id="crime_type" name="crime_type" class="validate col s12 m8 offset-m2" required>
             <option value="" disabled selected>Choose your crime type</option>
             {% for crime in crime_type %}
-                <option value="{{ crime.crime_type }}">{{ crime.crime_type }}</option>
+            <option value="{{ crime.crime_type }}">{{ crime.crime_type }}</option>
             {% endfor %}
         </select>
     </div>
@@ -53,7 +53,7 @@
         <label class="col s12 m8 offset-m2" for="report_description">Report Details:</label>
         <div class="input-field col s12 m8 offset-m2">
             <textarea id="report_description" name="report_description" minlength="15" maxlength="500"
-                pattern="[a-zA-Z0-9 ]+" class="materialize-textarea validate" required></textarea>
+                class="materialize-textarea validate" required></textarea>
         </div>
     </div>
     <!--Submit Button-->
