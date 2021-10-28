@@ -52,7 +52,7 @@ I expect all of you Scrappers(Officers), will find it easy to navigate and intui
 
   The home page has a welcome message and an explaination of what the site is for.  There are two buttons at the bottom that navigate to the add report and view report pages.
 
-  On the Add Report page, there is a form for the officer to fill in.  The form uses validation techniques, to ensure that the information given is what is needed to keep the database consistant.
+  On the Add Report page, there is a form for the officer to fill in.  The form uses front end validation techniques, to ensure that the information given is what is needed to keep the database consistant.
 
   Once the form is filled out, the user clicks the submit button at the bottom of the page.  This takes them to a page that says "Report successfully submitted", where the user can then navigate to any of the other pages.
 
@@ -64,7 +64,7 @@ I expect all of you Scrappers(Officers), will find it easy to navigate and intui
 ---
    * **Colours**
        
-       * The site is designed in the retrofuturism style, depicting the old black and green phosperescent monitors from the 80s.  Simple, yet effective, giving great contrast on the screen. 
+       * The site is designed in the retrofuturism style, depicting the old black and green phosperescent monitors from the 80s.  Simple, yet effective, giving great contrast on the screen. This is said to be one of the best contrast colour schemes to use for the visually impaired.
        
    * **Typography**
 
@@ -77,6 +77,7 @@ I expect all of you Scrappers(Officers), will find it easy to navigate and intui
      *  The imagery used was a simple black background with green text.
         
      *  The images used for the androids were stock photos from Pexels.
+     I used the image URLs on the database.
 
 * **Wireframes**
 
@@ -94,7 +95,7 @@ I expect all of you Scrappers(Officers), will find it easy to navigate and intui
 
 ### Add Report Page
 
-* On this page, there is a form for the user to fill out.  There are several categories to choose from in regards to crime type.  The user simply follows the form down to the bottom of the page and submits the report.  There are several validation techniques, to ensure that the user fills out the form correctly.  For example, min and max length, type="text", pattern(a-zA-Z) and the required attribute.  These are used to ensure consistancy of data on the database.
+* On this page, there is a form for the user to fill out.  There are several categories to choose from in regards to crime type.  The user simply follows the form down to the bottom of the page and submits the report.  There are several front end validation techniques, to ensure that the user fills out the form correctly.  For example, min and max length, type="text", pattern(a-zA-Z) and the required attribute.  These are used to ensure consistancy of data on the database.
 
 
 # Technologies Used
@@ -106,9 +107,10 @@ I expect all of you Scrappers(Officers), will find it easy to navigate and intui
  
  * [CSS3](https://en.wikipedia.org/wiki/CSS) - Cascading style sheet used to style.
 
- * [JavaScript](https://en.m.wikipedia.org/wiki/JavaScript) - Programming language, used to activate the collapsible side nav and form elements.
+ * [JavaScript](https://en.m.wikipedia.org/wiki/JavaScript) - Programming language, used to activate the collapsible side nav and form elements, through the use of jQuery.
 
  * [Python3](https://en.wikipedia.org/wiki/Python_(programming_language))- Programming language used to create the main app and render the html templates.
+ 
  
 
  ## **Frameworks, Libraries and Programs Used**
@@ -138,6 +140,10 @@ I expect all of you Scrappers(Officers), will find it easy to navigate and intui
   * I used the font Tourney from Google fonts, as it looked the fitting
     for the style of the game.  
 
+ 7. [jQuery](https://en.wikipedia.org/wiki/JQuery)
+
+  * I used jQuery to activate the Materialize drop down menu, mobile side nav and the sweet alert function upon attempting deletion of reports.    
+
 
 # Testing
 
@@ -147,61 +153,58 @@ For testing the code for errors, I used the following;
 
 - [W3C CSS Validation](https://jigsaw.w3.org/css-validator/)
 
-- [Beautify Tools JS validator](https://beautifytools.com/javascript-validator.php)
-
-- [es6console](https://es6console.com) 
+- [pep8online.com](http://pep8online.com/)
 
 - [W3C Markup Validation](https://validator.w3.org/)
 
 These were used in particular, to check for errors in the code to enable me
 to rectify these and have a fully functioning website.
 
-# Testing the game functionality
+# Testing the app functionality
 
 For the functionality tests, I ran through what I considered to be the core 
-functions of the game and attempted to use them as a standard player would.
+functions of the app and attempted to use them as a standard user would.  I also checked that the correct data only was being sent to and from the database.
 The results are as below.
 
 | Test Label     | Test Action   | Expected Outcome  | Test Outcome | 
 | -------------  |-------------- |----------------- | ------------ |
-| Game Setup     | The modal is <br> displayed and the <br> button starts the <br>game. | The game starts. | PASS
-| The player is <br> displayed      | Start the game<br> to check.      |  The player is <br> displayed  | PASS
-| The score is<br>displayed.  | Check the top <br>corner.      | The score is<br>displayed.   | PASS |
-| enemies<br>approach <br>player.  | Start the game  | The enemies<br>approach <br>player.   | PASS | 
-| Enemies explode     | When hit, enemies <br> explode, creating <br> particles to fly out. | Enemies explode . | PASS 
-| Exlosions fade     | When enemies explode <br> the particles they create <br> fade out. | Particles fade . | PASS
-| Explosion particles<br> slow down over<br>time.| Destroy enemy. | Particles slow down<br>when floating round . | PASS  
+| Home Page<br>Display    | All aspects of the <br> page are displaying <br> correctly. | The page displays<br> correctly. | PASS
+| The Nav hover <br> works correctly      | Hover the cursor<br> over the nav links. |  The link switches <br> colours  | PASS
+| The button hover<br>works correctly.  | Hover the cursor <br>over the buttons. | The buttons switches<br>colours.   | PASS |
+| All links work<br>correctly.  | Attempt to use<br> the links  | The links go to the<br>correct page.   | PASS | 
+| All buttons work<br> correctly | Attempt to use the <br> buttons. | Buttons go to the <br> correct page. | PASS 
+| Form inputs accept<br> user input. | Attempt to input <br> data. | Input is accepted. | PASS
+| Form validation<br>works correctly.| Attempt to input<br>invalid data. | Form validation<br>gives a warning<br>stating to the user<br> that the data is invalid. | PASS |
+ only correct<br>data goes to<br>the database.| Attempt to input<br>invalid data. | Form validation<br>does not allow<br>incorrect data to <br>be sent to and <br>from the database | PASS  
 
-# Testing the game during the build
+# Testing the app during the build
 
-To test the game while I was coding, I used the console.log()
-to show that certain functions acted the way they should.  I logged out the word 'go' to show that the action or event had taken place.
+To test the app while I was coding, I checked that the CRUD functions were working correctly, by physically checking the database to ensure that the actions and data were being executed properly.  For the @app.routes, I simply used the live preview to check that the pages were being displayed properly and that the redirects were going to the correct page.
 
 | Test Label     | Test Action   | Expected Outcome  | Test Outcome | 
 | -------------  |-------------- |----------------- | ------------ |
-| Draw Player     | log the word<br>'go' to the<br>console. | The word go will be <br>logged to<br>the console. | PASS
-| Projectile<br>click event.| Set the event<br>to log 'go'<br>to the console.|   The word go will be <br>logged to<br>the console. | PASS
-| Touch screen<br>to fire     | Touch the screen <br> during gameplay <br> to fire <br>projectiles. | Projectiles fire. | PASS
-|The score<br>is displayed. | Check the top <br>left corner.      | The score is<br>displayed.   | PASS |
-| enemies<br>approach <br>player.  | Start the game  | The enemies<br>approach <br>player.   | PASS |
+| user can create <br> a report. | Attempt to <br>create a <br>report. | The report is<br>successfully<br>sent to the <br>database. | PASS
+| User can <br>read reports.| Go to the view<br>reports page to<br>check the reports are<br>being displayed.| The reports are<br>displayed<br>correctly. | PASS
+| Does the dropdown<br>menu work for viewing<br>reports | Click on the carret <br>to check the functionality. | Dropdown functions<br>correctly. | PASS
+|The edit report<br>button works. | The edit report button <br>goes to the edit report <br>page. | The button goes to<br>the correct page.   | PASS |
+| Users can edit<br>a report. | attempt to edit a<br>report. | The submit button <br>takes the user <br>to the edit success <br>screen.   | PASS |
+| Edited reports<br>are changed on the<br>database. | Check the database<br>to see if the report<br>has been updated. | The report has been <br>updated.   | PASS |
+| Users can remove<br>reports. | Attempt to delete<br>the report. | The report has been <br>deleted. | PASS 
+| Delete confirmation <br>warning is displayed. | Attempt to delete<br>the report. | The warning <br>is displayed. | PASS
+| Reports have been<br>reomved from the <br>database. | Check the database<br>to see if the report<br>has been removed. | The report has been <br>removed from the<br>database. | PASS
+| Known android<br>data is loaded from<br>the database correctly. | View the known<br>androids page. | All data is correctly <br>displayed on the page. | PASS
 
 
 # Code errors from the validator tools
 
-As you can see, there is very little HTML or CSS in this project, so the code validators threw no errors (which was nice to see for once!).
-
-
-
-I had a few declaration errors in the JavaScript which were simple enough to fix, and finally I had errorless code (HUZZAH!).
+While there is a lot of code in this project, I am happy to confirm, there are no errors after running the code into the different validators.
 
 ---
 
 ## Known Bugs
 ---
 
-As you can see, I used arrow functions and trailing commas in argument lists which are constructs used in ES6 and ES8, so the validator threw some errors about these.  However, this was the syntax I wanted to use for things to be quicker and less verbose, so I have not tried to rectify these.
-
-I used gsap to shrink large enemies and remove them if they were a certain size.  For some reason, this threw an error? It was of no consequence, so I left it in.
+The only bug that I came accross during development was that the category dropdown on the add report page was unable to be styled correctly, leaving it more narrow than the other inputs.  However, it still functions correctly and does not look out of place.
 
 ---
 

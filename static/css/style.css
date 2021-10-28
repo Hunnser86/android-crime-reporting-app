@@ -122,14 +122,14 @@ ul li a:hover {
     background-color: black;
     color: green;
     border: dotted 2px green;
-    max-width: 600px;
+    max-width: 700px;
 }
 
 
 .collapsible-body{
     color:green;
     border: dotted 2px green;
-    max-width: 600px;
+    max-width: 700px;
 }
 
 ul.collapsible{
