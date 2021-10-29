@@ -53,7 +53,7 @@ I expect all of you Scrappers(Officers), will find it easy to navigate and intui
 
   The home page has a welcome message and an explaination of what the site is for.  There are two buttons at the bottom that navigate to the add report and view report pages.
 
-  On the Add Report page, there is a form for the officer to fill in.  The form uses front end validation techniques, to ensure that the information given is what is needed to keep the database consistant.
+  On the Add Report page, there is a form for the officer to fill in.  The form uses front end validation techniques, to ensure that the information given is what is needed to keep the database consistent.
 
   Once the form is filled out, the user clicks the submit button at the bottom of the page.  This takes them to a page that says "Report successfully submitted", where the user can then navigate to any of the other pages.
 
@@ -95,18 +95,18 @@ The advantage of using a key/value database, is that it can be used as a cache t
     * I made some simple wireframes in the design process to show how it will look.  As you can see, the original idea was a workshop database, for androids that had broken down.
 ---
 
-   ![screenshot of the wireframe process](/assets/wireframes/wireframe-1.png)
+   ![screenshot of the wireframe process.](/assets/wireframes/wireframe-1.png)
 
     
 # Features 
   ### Welcome Page
      
-* The first page the user will land on, is the welcome page.  On this page, there is a welcome message, followed by a description of what the site is for.  There is a navbar that is consistant accross all pages, that has links to home, add report, view reports and known androids pages.  Under the message, there are two buttons.  One to add a report and one to view previous reports.
+* The first page the user will land on, is the welcome page.  On this page, there is a welcome message, followed by a description of what the site is for.  There is a navbar that is consistent across all pages, that has links to home, add report, view reports and known androids pages.  Under the message, there are two buttons.  One to add a report and one to view previous reports.
 
 
 ### Add Report Page
 
-* On this page, there is a form for the user to fill out.  There are several categories to choose from in regards to crime type.  The user simply follows the form down to the bottom of the page and submits the report.  There are several front end validation techniques, to ensure that the user fills out the form correctly.  For example, min and max length, type="text", pattern(a-zA-Z) and the required attribute.  These are used to ensure consistancy of data on the database.
+* On this page, there is a form for the user to fill out.  There are several categories to choose from regarding crime type.  The user simply follows the form down to the bottom of the page and submits the report.  There are several front end validation techniques, to ensure that the user fills out the form correctly.  For example, min and max length, type="text", pattern(a-zA-Z) and the required attribute.  These are used to ensure consistancy of data on the database.
 
 
 # Technologies Used
@@ -157,7 +157,15 @@ The advantage of using a key/value database, is that it can be used as a cache t
 
  8. [MongoDB](https://www.mongodb.com/)
 
-  * I used MongoDB to store all the data given by the user and the data on the known androids.     
+  * I used MongoDB to store all the data given by the user and the data on the known androids.
+
+ 9. [Flask](https://flask.palletsprojects.com/en/2.0.x/)
+   
+  *  I used Flask framework to compile modules and libraries.  
+
+ 10. [Heroku](https://www.heroku.com/) 
+ 
+  *  Is a container-based cloud Platform, I used Heroku to deploy this app.    
 
 
 # Testing
@@ -219,7 +227,7 @@ While there is a lot of code in this project, I am happy to confirm, there are n
 ## Known Bugs
 ---
 
-The only bug that I came accross during development was that the category dropdown on the add report page was unable to be styled correctly, leaving it more narrow than the other inputs.  However, it still functions correctly and does not look out of place.
+The only bug that I came across during development was that the category dropdown on the add report page was unable to be styled correctly, leaving it more narrow than the other inputs.  However, it still functions correctly and does not look out of place.
 
 ---
 
@@ -227,9 +235,9 @@ The only bug that I came accross during development was that the category dropdo
 
   **To help report and catalogue Android crime.**
 
-   *  **To make it simple to understand**
+   *  **To make it simple to understand.**
           
-        This was achieved by giving the user a brief explaination of what the app was for on the home page. There is a nav bar that populates the top of each page and all the form elements and buttons are clearly labeled and positioned seperately, allowing the user to easily undertand the intended flow of the app.       
+        This was achieved by giving the user a brief explaination of what the app was for on the home page. There is a nav bar that populates the top of each page and all the form elements and buttons are clearly labeled and positioned seperately, allowing the user to easily understand the intended flow of the app.       
     
  *  **To make it easy for officers to create, read, update and delete reports.**
       This was achieved, by having a simple form for report creation, which is fully labeled and has front end validation to avoid any bad data being sent to the database.
@@ -271,7 +279,7 @@ The only bug that I came accross during development was that the category dropdo
   use it.  I asked the first person to test it on mobile devices such as , mobile phones and tablets.
   
     They were asked to check both orientations, to see if the responsiveness worked.
-    They were also asked to check the site accross Chrome, Firefox and Opera browsers to check compatability.
+    They were also asked to check the site accross Chrome, Firefox and Opera browsers to check compatibility.
 
   * For the next test I asked three people to check the desktop version of the app. Each of them had a different browser.  One had Chrome, one had Firefox and one had Opera.  
 
@@ -282,46 +290,39 @@ The only bug that I came accross during development was that the category dropdo
 
 # Deployment
 
-  * For deployment, I linked my GitHub repository to Heroku and enabled automatic deployments.  
-  
-    To deploy the app, I first had to create a requirements.txt and procfile   files to tell Heroku which dependencies are required to run the app.
-    
-    To create the Procfile I used the echo web: python app.py > Procfile  command in in the terminal.
-    
-    To create the requirements.txt file I used the pip3 freeze --local > requirements.txt cammand in the terminal.
+  * For deployment, I linked my GitHub repository to Heroku and enabled automatic deployments.
 
-    I then checked that the files were properly created by opening them to see their contents.
+   To deploy the app, I first had to create a requirements.txt and profile files to tell Heroku which dependencies are required to run the app.
 
-    Next, I went to Heroku.com and went to the deploy page and chose the GitHub deployment method.  In the connect to GitHub section, I made sure my GitHub profile was displayed and then I entered the repository name.  Once the name was found, I clicked the connect button.
+   To create the Profile I used the echo web: python app.py > Profile command in the terminal.
 
-    To enable Heroku to read the env.py file which had been hidden within the gitignore file, I went to the settings page for the app and clicked on the "reveal config vars button" and entered the information from the env.py file.
+   To create the requirements.txt file I used the pip3 freeze --local > requirements.txt command in the terminal.
 
-    The next step was to push the two new files to GitHub, to ensure everything was available before enabling automatic deployment on Heroku.
+   I then checked that the files were properly created by opening them to see their contents.
 
-    The final step is to go back to Heroku and enable automatic deployments.  I select the main branch and click "deploy branch".  Heroku will recieve the code from GitHub and build the app.
+   Next, I went to Heroku.com and went to the deploy page and chose the GitHub deployment method. In the connect to GitHub section, I made sure my GitHub profile was displayed and then I entered the repository name. Once the name was found, I clicked the connect button.
 
-    Once the app has been built, a message will appear, saying "Your app was successfully deployed".
+   To enable Heroku to read the env.py file which had been hidden within the git ignore file, I went to the settings page for the app and clicked on the "reveal con fig vars button" and entered the information from the env.py file.
 
-    I clicked view to launch the app.  And WOOOOO HOOOO job done!
+   The next step was to push the two new files to GitHub, to ensure everything was available before enabling automatic deployment on Heroku.
+
+   The final step is to go back to Heroku and enable automatic deployments. I select the main branch and click "deploy branch". Heroku will receive the code from GitHub and build the app.
+
+   Once the app has been built, a message will appear, saying "Your app was successfully deployed".
+
+  I clicked view to launch the app.  And WOOOOO HOOOO job done!
   
 ---
 
-# Running the game locally
+## CLONINNG - GITHUB
 
-  *  To run the game locally, you will need to clone the GitHub [repository](https://github.com/Hunnser86/Spaceball-shooter-game)
-
-  *  To do this, simply go to the GitHub [repository](https://github.com/Hunnser86/Spaceball-shooter-game).
-
-     * Next, click the dropdown menu named "code".  This will bring up the clone menu.
-     
-     * Select HTTPS and copy the link.
-
-     * Create a location on your local computer, where you would like to clone the repository.
-
-     * Then on your local terminal use the "git clone" command and paste the link after it and hit return.
-
-     * This will create a folder in the location you have created.  This will contain all the files from the
-     repository, allowing you to run the site.
+Follow this link to my Repository on [Github](https://github.com/Hunnser86/android-crime-reporting-app) and open it.
+Click Clone or Download.
+In the Clone with HTTPs section, click the copy icon.
+In your local IDE open Git Bash.
+Change the current working directory to where you want the cloned directory to be made.
+Type git clone, and then paste the URL you copied earlier.
+Press enter and your local clone will be ready.
 
 # Credits
 
@@ -329,34 +330,23 @@ The only bug that I came accross during development was that the category dropdo
 
   * All code was written by myself (Rob Hunns).
 
+  **Information**
+
+  * To find information on aspects of languages and frameworks, I used the official documentations, youtube, slack and the code institute tutors.
+
   **Tutorials**
 
-  * [For ideas on creating enemy ships](http://blog.sklambert.com/html5-canvas-game-the-enemy-ships/)  
+  * [For how to use sweetalert](https://www.youtube.com/watch?v=3Vi_WyRvN9c&t=312s)
 
-  * [For tips on canvas](https://www.w3schools.com/tags/ref_canvas.asp)
-
-  * [For information on canvas arc to draw the characters](https://www.w3schools.com/tags/canvas_arc.asp)
-
-  * [For information on collision detection](https://happycoding.io/tutorials/processing/collision-detection)
-
-  * [For how to move objects](https://stackoverflow.com/questions/6199018/moving-objects-on-html5-canvas)
-
-  * [for creating particles](https://modernweb.com/creating-particles-html5-canvas/)
-
-
-
-  
-
+---
 
 #  Acknowledgements
   
  
 
-  * I would first like to acknowledge my mentor Brian, for the suppoprt he has
-    given me during the project.  Particularly for giding me towards good documentation, for the parts of the project where I needed to do a bit more research.
+  * I would first like to acknowledge my mentor Brian, for the support he has given me during the project. Particularly for guiding me towards good documentation, for the parts of the project where I needed to do a bit more research. And also for being a genuinely funny guy and putting me at ease about what I was doing over the course of my project.
 
-  * Codeinstitute: For providing such good training and tutorials, giving me the confidence to 
-    keep going and to hone my problenm solving skills.
+  * Code institute: For providing such good training and tutorials, giving me the confidence to keep going and to hone my problem solving skills.
     
       
 
