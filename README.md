@@ -282,8 +282,27 @@ The only bug that I came accross during development was that the category dropdo
 
 # Deployment
 
-  * To deploy the app, I linked my Github to heroku.
+  * For deployment, I linked my GitHub repository to Heroku and enabled automatic deployments.  
+  
+    To deploy the app, I first had to create a requirements.txt and procfile   files to tell Heroku which dependencies are required to run the app.
+    
+    To create the Procfile I used the echo web: python app.py > Procfile  command in in the terminal.
+    
+    To create the requirements.txt file I used the pip3 freeze --local > requirements.txt cammand in the terminal.
 
+    I then checked that the files were properly created by opening them to see their contents.
+
+    Next, I went to Heroku.com and went to the deploy page and chose the GitHub deployment method.  In the connect to GitHub section, I made sure my GitHub profile was displayed and then I entered the repository name.  Once the name was found, I clicked the connect button.
+
+    To enable Heroku to read the env.py file which had been hidden within the gitignore file, I went to the settings page for the app and clicked on the "reveal config vars button" and entered the information from the env.py file.
+
+    The next step was to push the two new files to GitHub, to ensure everything was available before enabling automatic deployment on Heroku.
+
+    The final step is to go back to Heroku and enable automatic deployments.  I select the main branch and click "deploy branch".  Heroku will recieve the code from GitHub and build the app.
+
+    Once the app has been built, a message will appear, saying "Your app was successfully deployed".
+
+    I clicked view to launch the app.  And WOOOOO HOOOO job done!
   
 ---
 
