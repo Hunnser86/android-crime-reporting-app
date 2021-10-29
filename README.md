@@ -60,6 +60,16 @@ I expect all of you Scrappers(Officers), will find it easy to navigate and intui
 
   The final page is a known androids page, which details some of the known androids on the database.  Each android is displayed on a card with an image at the top.  The cards also display name, location, occupation, detention status and previous crimes committed by the android. 
 
+## Database Design
+
+I decided to use MongoDB for my database.  Therefore all the data is stored in key/value pairs (The most simple kind of data storage system).  I found this was the correct way to store my data, as it was very simple in it's nature e.g. android name, location etc.
+
+It was an easy way to later fetch the data to display it to the user via jinja and dot notation in the HTML templates by providing the key to MongoDB.
+
+The advantage of using a key/value database, is that it can be used as a cache to speed up the retrieval of commonly used data.  However, the disadvantage of this type of database is that the data being sent to it is uncontrolled, and needs a form of control to avoid bad data being stored.  I took care of this by using front end validation on the form elements of the app. 
+
+
+---
  ## Design
 ---
    * **Colours**
@@ -142,7 +152,11 @@ I expect all of you Scrappers(Officers), will find it easy to navigate and intui
 
  7. [jQuery](https://en.wikipedia.org/wiki/JQuery)
 
-  * I used jQuery to activate the Materialize drop down menu, mobile side nav and the sweet alert function upon attempting deletion of reports.    
+  * I used jQuery to activate the Materialize drop down menu, mobile side nav and the sweet alert function upon attempting deletion of reports.
+
+ 8. [MongoDB](https://www.mongodb.com/)
+
+  * I used MongoDB to store all the data given by the user and the data on the known androids.     
 
 
 # Testing
@@ -210,61 +224,20 @@ The only bug that I came accross during development was that the category dropdo
 
 ## Site owner Goals testing
 
-  **To give players a fun game.**
+  **To help report and catalogue Android crime.**
 
-   *  **To make it simple to understand and easy to use**
+   *  **To make it simple to understand**
+          
+        This was achieved by giving the user a brief explaination of what the app was for on the home page. There is a nav bar that populates the top of each page and all the form elements and buttons are clearly labeled and positioned seperately, allowing the user to easily undertand the intended flow of the app.       
     
-      To achieve this, I included a modal on the start screen of the game.  The modal displays the simple instructions "click or touch the screen to fire".  It also displays the players score and a button to start the game.    
+ *  **To make it easy for officers to create, read, update and delete reports.**
+      This was achieved, by having a simple form for report creation, which is fully labeled and has front end validation to avoid any bad data being sent to the database.
 
-   * **The game should start and stop at the appropriate times.**
-     
-     This goal was acieved simply by putting a button in the modal to start the game.  To end the game, the player must be hit by an enemy.  This was slightly more complicated.
-
-     I created an if statement, wherein, if the distance between the enemy radius and the player radius is less than one, the animation function ceases and the modal displays along with the score.
-
-     `if (dist - enemy.radius - player.radius < 1) {
-             cancelAnimationFrame(animationId);
-             modalEL.style.display = 'flex';
-             bigScoreEl.innerHTML = score;
-         }`
-
-   * **the enemies should explode**
-
-     AND DO THEY EVER!
-    I created a particle function which not only draws a particle, but updates the draw function to slow it's velocity to give it that outer space feel and then fade them out form the screen.
-
-    class Particle {
-    constructor(x, y, radius, color, velocity) {
-        this.x = x;
-        this.y = y;
-        this.radius = radius;
-        this.color = color;
-        this.velocity = velocity;
-        this.alpha = 1;
-    }
-
-    draw() {
-        ctxt.save();
-        ctxt.globalAlpha = this.alpha;
-        ctxt.beginPath();
-        ctxt.arc(
-            this.x, this.y, this.radius, 0, Math.PI * 2,
-            false);
-        ctxt.fillStyle = this.color;
-        ctxt.fill();
-        ctxt.restore();
-    }
-
-    update() {
-        this.draw();
-        //slows the velocity over time
-        this.velocity.x *= friction; 
-        this.velocity.y *= friction;
-        this.x = this.x + this.velocity.x;
-        this.y = this.y + this.velocity.y;
-        this.alpha -= 0.01;
-    }
-}
+      There is a view reports page, where the user can read all the previous reports.  Within the reports there are buttons that are clearly marked, allowing the user to edit or remove reports. 
+ 
+    
+ 
+ *  Allow officers to read information about known androids.
             
     
 ---
