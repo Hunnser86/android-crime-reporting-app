@@ -43,7 +43,8 @@ I expect all of you Scrappers(Officers), will find it easy to navigate and intui
      * **Visitor Goals**
 
        *  Visitors should be able to easily navigate the site
-       *  Perform C.R.U.D functions on any information stored
+       *  Perform C.R.U.D functions on any reports
+       *  Have confirmation about the actions they have taken
 ---
  ## Structure
 
@@ -233,11 +234,13 @@ The only bug that I came accross during development was that the category dropdo
  *  **To make it easy for officers to create, read, update and delete reports.**
       This was achieved, by having a simple form for report creation, which is fully labeled and has front end validation to avoid any bad data being sent to the database.
 
-      There is a view reports page, where the user can read all the previous reports.  Within the reports there are buttons that are clearly marked, allowing the user to edit or remove reports. 
+      There is a view reports page, where the user can read all the previous reports.  Within the reports there are buttons that are clearly marked, allowing the user to edit or remove reports.  When users attempt to remove a report, an alert pops up to ask them to confirm that they are sure, to make sure that reports don't get removed by accident. 
  
     
  
- *  Allow officers to read information about known androids.
+ *  **Allow officers to read information about known androids.**
+
+     To achieve this, I have created a known androids page.  This page contains an image and the details of all the known androids.
             
     
 ---
@@ -247,51 +250,41 @@ The only bug that I came accross during development was that the category dropdo
 
 
 
- *  **visitors should be able to immediately begin playing.**
-     
-      This was achieved, simply by putting the modal on the start page, with a button to start the game.
+ *  **Visitors should be able to easily navigate the site**
+      
+      Users can easily navigate the site either by using the nav bar at the top of each page, or using the buttons that are clearly marked with their functions.
 
-   *  **They should be able to see their score.**
       
-      The score is displayed throughout the game, in the top left of the screen.  At the end of the game, the high score is displayed in the modal.
-      
-   *  **They should be able to restart the game from scratch.**
-     
-      The player simply needs to click the button, and off they go.
+ *  **Perform C.R.U.D functions on any reports**
+
+     As stated above, the users can perform all the C.R.U.D functions by following the flow of the app, or by visiting the previously reported crime page and using the buttons to edit or remove reports. 
+
+
+ *  **Have confirmation about the actions they have taken**
+
+      Each time the user performs one of the C.R.U.D functions, they are taken to a seperate page confirming that the actions they have taken have been successful.  When the user attempts to remove a report, an alert pops up asking them to confirm the action.      
+
 ---
 # Client based testing
 
-  * For the client based tests, I sent the link to the game to various people and asked them, to 
+  * For the client based tests, I sent the link to the app to various people and asked them, to 
   use it.  I asked the first person to test it on mobile devices such as , mobile phones and tablets.
   
     They were asked to check both orientations, to see if the responsiveness worked.
     They were also asked to check the site accross Chrome, Firefox and Opera browsers to check compatability.
 
-  * For the next test I asked three people to check the desktop version of the game. Each of them had a different browser.  One had Chrome, one had Firefox and one had Opera.  
+  * For the next test I asked three people to check the desktop version of the app. Each of them had a different browser.  One had Chrome, one had Firefox and one had Opera.  
 
-    I asked them to check the gameplay for glitches such as players not displaying or firing etc and to check for any gramatical errors.
+    I asked them to check the app for glitches such as items not displaying correctly and gramatical errors.
 
-  * After the tests were completed, they reported back that the game worked fine accross all browsers
+  * After the tests were completed, they reported back that the gapp worked fine accross all browsers
   and the responsiveness worked on all the mobile devices that were used.  There were no gramatical errors either (which was nice).    
 
 # Deployment
 
-  * To deploy the game, I used [GitHub pages](https://pages.github.com/).
+  * To deploy the app, I linked my Github to heroku.
+
   
-    The process for this was simple.  I used the terminal on the [Gitpod](https://www.gitpod.io/)
-    IDE.  I used the git add . command to add all the files that had been worked on.  Next I used the git commit
-    command, to commit my files ready for deployment, followed by the git push command, to push the code to 
-    [GitHub](https://github.com/).
-
-    I also did this during development, so as not to loose and changes or work that I had done.
-
-  * To link Github pages to the correct files I went to settings and scrolled down to the 
-  [GitHub pages](https://github.com/Hunnser86/Milestone-project-version-3/settings) section of the page.  
-  Next, I clicked the drop down menu on the source section
-  and chose the master branch and the root folder from my repository.  This is how GitHub pages
-  built my game.
-
-  * I then waited for the game to be built and followed the link at the top of the section.
 ---
 
 # Running the game locally
