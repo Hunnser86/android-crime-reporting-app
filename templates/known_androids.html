@@ -6,12 +6,11 @@
 <h1 class="page_title center-align">Known Androids</h1>
 
 <div class="row">
-{% for entry in data %}
+    {% for entry in data %}
     <div class="col s12 m8 offset-m2">
         <div class="card">
             <div class="card-image">
-                <img src="{{ entry.image_source }}"
-                    alt="Portrait of an android criminal">
+                <img src="{{ entry.image_source }}" alt="Portrait of an android criminal">
             </div>
             <span class="card-title">Name: {{ entry.name}}</span>
             <div class="card-content">
@@ -32,15 +31,6 @@
         </div>
     </div>
     {% endfor %}
-
-
-
 </div>
-
-
-
-
-
-
 
 {% endblock %}
